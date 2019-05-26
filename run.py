@@ -193,9 +193,6 @@ if __name__ == "__main__":
     
     # decode
     inference.inference(ckpt, infer_input_file, trans_file, hparams)
-    
-    if del_temp_file:
-      os.remove(infer_input_file)
 
     if args.rescore:
       if not args.rescore_logdir:
@@ -210,7 +207,9 @@ if __name__ == "__main__":
       elif hparams.tgt_vocab_size == 27:
         report_utils.main(trans_dir, input_dir, 'p-mod')
     
+    if del_temp_file:
+      os.remove(infer_input_file)
+
   else:
     print('training')
     train.train(hparams)
-
