@@ -1,10 +1,12 @@
 # SMSNet
 
-## Sequence-Mask-Search framework and SMSNet model for Protein Identification.
+## Sequence-Mask-Search framework and SMSNet model for de novo peptide sequencing.
 
 The pre-trained model can be downloaded from [FigShare](https://figshare.com/articles/SMSNet_s_trained_models/8259122).
 
 SMSNet's predicted amino acid sequences for a public HLA peptidome dataset (MassIVE accession MSV000080527) and phosphoproteome dataset (PRIDE accession PXD009227) can be found on [FigShare](https://figshare.com/articles/SMSNet_s_predictions_for_HLA_peptidome_and_human_phosphoproteome_datasets/8259134).
+
+The preprint can be found on [bioRxiv](http://biorxiv.org/cgi/content/short/667527v1).
 
 ## Dependencies
 This project uses Python 3.5.2, with the following lib dependencies:
