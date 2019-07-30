@@ -1,8 +1,5 @@
 import os
-import csv
 import sys
-
-csv.field_size_limit(sys.maxsize)
 
 # file_names = [] # 'evidence_16.txt'
 # for i in range(0, 28, 1): # range(0,212,1):
