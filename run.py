@@ -43,7 +43,7 @@ hparams = tf.contrib.training.HParams(
       #vocab_prefix=flags.vocab_prefix,
       #embed_prefix=flags.embed_prefix,
       out_dir="log_ablation/log_best_700k...",# encoder_to_decoder_lookahead", # "log_nomod_full", #"test_one",
-      tgt_vocab_file="nmt/vocab/vocab_nomod.txt",# "nmt/vocab/vocab_m.txt",
+      tgt_vocab_file="nmt/vocab/vocab.txt",# "nmt/vocab/vocab_m.txt",
       tgt_vocab_size=27, # 27,
       tgt_embed_file="",
       
