@@ -52,10 +52,6 @@ water = 18.010565
 min_aa_mass = min(aa_mass_list)
 max_aa_mass = max(aa_mass_list)
 
-trivial_map = {}
-for i in range(len(aa_list)):
-    trivial_map['(' + str(aa_mass_list[i]) + ')'] = aa_list[i]
-    
 all_results = []
 unique_peptides = set()
 
@@ -71,13 +67,8 @@ with open(os.path.join(input_path, exp_name + '_' + mode_tag + '_' + fdr_tag + '
         content.extend(line.rstrip('\n').split('\t'))
         
         if abs(float(content[mass_tol_col])) <= denovo_mass_tol: ## filter by mass tolerance
-            all_results.append(content)         
-            temp = content[peptide_col]
-            
-            for tag in trivial_map:
-                temp = temp.replace(tag, trivial_map[tag])
-            
-            unique_peptides.add(temp)
+            all_results.append(content)
+            unique_peptides.add(content[peptide_col])
             
         current_id += 1
     
