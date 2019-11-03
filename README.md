@@ -34,8 +34,9 @@ Model parameters (including possible amino acids) can be found in "nmt/input_con
 ### Note
 * In order to generate the report file, the ```TITLE``` lines in .mgf file must end with "scan=<number>".
 * To switch between m-mod and p-mod model, the following changes are needed (default: p-mod):
-    * ```tgt_vocab_size``` (24 for m_mod / 27 for p-mod) and ```tgt_vocab_file``` in ```run.py``` line 46-47.
+    * ```tgt_vocab_size``` (24 for m_mod / 27 for p-mod) and ```tgt_vocab_file``` in ```run.py``` line 61-62.
     * Comment/uncomment the possible vocab in ```inverse_vocab``` in ```nmt/input_config.py``` accordingly ('s', 't', 'y' at line 65, 67, 71).
+    * Select the corresponding ```AA_weight_table``` in function ```create_aa_tables()``` in ```nmt/input_config.py``` (by comment/uncomment line 169-174 or 176-180).
 
 
 ### Outputs
